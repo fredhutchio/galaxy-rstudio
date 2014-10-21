@@ -188,7 +188,7 @@ import ConfigParser
     """
         Generate and return the docker command to execute
     """
-    return '%s run -d --sig-proxy=true -p %s:%s -v "%s:/import/" %s' % \
+    return '%s run -d --sig-proxy=true -p %s:%s -v "%s:/import" %s' % \
         (self.attr.viz_config.get("docker", "command"), self.attr.PORT, self.attr.docker_port,
          temp_dir, self.attr.viz_config.get("docker", "image"))
 %>
